@@ -1,0 +1,41 @@
+{/* Order Overview Section */}
+                <div className="order-overview">
+                    <h2>Order overview</h2>
+                    <div className="order-details">
+                        <div className="order-item">
+                            <span>Subtotal</span>
+                            <span>...</span>
+                        </div>
+                        <div className="order-item">
+                            <span>Min. order</span>
+                            <span>...</span>
+                        </div>
+                        <div className="order-item">
+                            <span>Travel costs</span>
+                            <span>...</span>
+                        </div>
+                        <div className="order-item">
+                            <span>Free access from</span>
+                            <span>...</span>
+                        </div>
+                        <div className="order-item">
+                            <span>VAT 07%</span>
+                            <span>...</span>
+                        </div>
+                        <div className="order-item">
+                            <span>VAT 19%</span>
+                            <span>...</span>
+                        </div>
+                        <div className="order-item">
+                            <span>IN TOTAL</span>
+                            <span>...</span>
+                        </div>
+                    </div>
+                    <div className="order-type">
+                        <input type="radio" id="delivery" name="orderType" value="delivery" />
+                        <label htmlFor="delivery">Delivery</label>
+                        <button>Order type: Change</button>
+                    </div>
+                    <p>Please log in if registered</p>
+                    <button className="pre-order-button">Pre-order</button>
+                </div>

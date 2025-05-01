@@ -1,13 +1,26 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Glyphter', sans-serif !important;  /* Force Glyphter */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/*@font-face {
+  font-family: 'CustomFont';
+  src: url('./styles/assets/fonts/Glyphter.woff') format('woff'),
+       url('./styles/assets/fonts/Glyphter.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+body {
+  margin: 0;
+  font-family: 'CustomFont', sans-serif;  /* Custom font apply kar rahe hain */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

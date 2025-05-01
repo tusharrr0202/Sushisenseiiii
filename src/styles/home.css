@@ -1,0 +1,435 @@
+/* 📦 Page Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  background-color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 70px;
+}
+
+.header-logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  gap: 20px;
+}
+
+/* 📝 Scroll Container (for buttons) */
+.button-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  margin-bottom: -70px;
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 70px; /* Adjusted to be below fixed header */
+  left: 0;
+  z-index: 15;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 📝 Button List */
+.button-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0 20px;
+  margin: 0;
+  flex-wrap: nowrap;
+}
+
+/* 📝 Button Styling */
+.button {
+  background-color: #e5f4e3;
+  padding: 16px 24px;
+  border-radius: 50px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #2d662f;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  flex: 0 0 auto;
+  min-width: 130px;
+}
+
+.button:hover {
+  background-color: #c5e1a5;
+}
+
+/* Main Content Area */
+.main-content {
+  display: flex;
+  flex-direction: row; /* For side-by-side layout on wider screens */
+  align-items: flex-start;
+  padding-top: calc(70px + 60px); /* Adjusted for sticky button bar */
+  gap: 14px; /* Spacing between card area and order overview on wider screens */
+  justify-content: space-between; /* Add this line */
+}
+
+/* Left side container for all card content */
+.card-area {
+  width: 70%; /* Adjusted width to accommodate full-width order overview */
+  margin-bottom: 25px;
+}
+
+/* 🧱 Card Grid Layout - Default for most sections (two columns) */
+.card-area .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* Specific styling for New Creations section */
+#newCreationsSection {
+  margin-left: 20px; /* Reset left margin */
+  margin-top: 0;
+}
+
+#newCreationsSection h2 {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#newCreationsSection .card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on wider screens */
+  gap: 8px; /* Adjust gap as needed between cards */
+  margin-bottom: 25px;
+}
+
+/* Styling for other card grid sections (keeping your existing styles) */
+#dealOfMonthSection .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#pokeBowlsSection .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#sportiliciousSection .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#boxesSection .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#appetizersSection .card-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 🍔 New Food Card Styling */
+.food-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0eee0;
+  margin: 5px;
+  background-color: #D2E6C9;
+  width: 465px;
+  height: 200px;
+}
+
+.food-card .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 150px;
+}
+
+.food-card .image-container img {
+  width: 142px;
+  height: 142px;
+  object-fit: contain;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Remove the overlay as it's not present in the desired output */
+.food-card .image-container .overlay {
+  display: none;
+}
+
+/* Adjust .details */
+.food-card .details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.food-card .details h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.food-card .details p {
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.food-card .details .price-add {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.food-card .details .price-add .price {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.2em;
+  margin-right: 15px;
+}
+
+.food-card .details .price-add .info-icon {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #aaa;
+  margin-right: 15px;
+}
+
+.food-card .details .price-add .add-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Order Overview Section */
+.order-overview {
+  width: 150%; /* Make it full width */
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #D2E6C9; /* Keep your preferred background */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  color: black; /* Adjust text color if needed */
+  margin-right: 10; /* Remove right margin */
+}
+
+.order-overview h2 {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 2.0em;
+  text-align: center;
+  color: #fff;
+  background-color: #367236;
+}
+
+.order-details {
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0; /* Remove bottom margin */
+  padding-bottom: 5px; /* Adjust padding */
+  font-size: 0.95em;
+  color: black; /* Adjust text color */
+  border-bottom: none; /* Remove line separators */
+}
+
+.order-item span:first-child {
+  font-weight: bold;
+  color: #333;
+}
+
+.order-item.discount {
+  color: red;
+}
+
+.order-type {
+  margin-bottom: 15px;
+}
+
+.order-type span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.order-type button {
+  background: none;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pre-order-button {
+  width: 100%; /* w-full */
+  font-size: 1.25rem; /* text-xl */
+  background-image: linear-gradient(to right, #BCE158, #387339); /* bg-gradient-to-r */
+  color: #FFF; /* text-white */
+  font-weight: 600; /* font-semibold */
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  border-top-left-radius: 0.75rem; /* rounded-tl-xl */
+  border-bottom-right-radius: 0.75rem; /* rounded-br-xl */
+  border: none;
+  cursor: pointer;
+  transition: background-image 0.4s ease-in-out; /* transition */
+  text-align: center;
+  text-decoration: none;
+}
+
+.pre-order-button:hover {
+  background-image: linear-gradient(to right, #387339, #BCE158); /* hover:bg-gradient-to-r */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    padding-top: calc(70px + 60px);
+    align-items: stretch; /* Make order overview full width */
+  }
+
+  .card-area {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .card-area .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #newCreationsSection {
+    margin-left: 0; /* Reset left margin on smaller screens */
+  }
+  #newCreationsSection h2 {
+    margin-top: 5px; /* Adjust this value */
+    margin-bottom: 15px; /* Adjust this value */
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  #newCreationsSection .card-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Make food cards full width */
+    gap: 0px; /* Adjust vertical gap on smaller screens */
+    
+  }
+
+  #dealOfMonthSection .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #pokeBowlsSection .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #sportiliciousSection .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #boxesSection .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #appetizersSection .card-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .order-overview {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .button-scroll-container {
+    top: 70px;
+  }
+
+  .button-list {
+    padding: 0 10px;
+  }
+
+  .button {
+    padding: 12px 18px;
+    font-size: 15px;
+    min-width: 100px;
+  }
+
+  .creation-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .creation-card .image-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .food-card {
+    width: 100%; /* Make food cards full width on smaller screens */
+    margin: 10px 0; /* Adjust margin for vertical stacking */
+  }
+}
+
+/* Styles for wider screens (769px and above) */
+@media (min-width: 769px) {
+  .main-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: calc(70px + 60px); /* Adjusted for sticky button bar */
+  }
+
+  .card-area {
+    margin-left: 10px;
+    width: 60%;
+    margin-bottom: 25px;
+  }
+
+  .order-overview {
+    width: 40%;
+    min-height: 200px;
+    margin-top: 25px;
+    margin-right: 25px;
+  }
+}
