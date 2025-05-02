@@ -1,3 +1,4 @@
+
 /* LoginModal.css */
 .overlay {
   position: fixed;
@@ -15,9 +16,9 @@
 .modal {
   background-color: white;
   padding: 30px 40px;
-  border-radius: 15px;
+  border-radius: 5px;
   position: relative;
-  width: 350px;
+  width: 400px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.3);
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -31,12 +32,18 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  color: #333; /* Make it dark to stand out on white */
+  background-color: #367337;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: white; /* Make it dark to stand out on white */
   cursor: pointer;
   z-index: 10;
+  display: flex; /* Added flex to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  font-size: 20px;
+  border: none;
 }
 
 .modal-title {
@@ -95,5 +102,3 @@
   font-weight: bold;
 }
 /*  */
-
-

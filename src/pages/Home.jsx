@@ -353,26 +353,18 @@ const Home = () => {
        <div id="boxesSection" className="content-section">
             <h2>Boxes</h2>
             <div className="card-grid">
-              {boxesData.map((box, index) => (
-               <div key={index} className="food-card">
-                  <div className="image-container">
-                    {box.image ? (
-                      <img src={box.image} alt={box.name} />
-                    ) : (
-                      <div className="image-placeholder"></div>
-                    )}
-                  </div>
-                  <div className="content">
-                    <h3>{box.name}</h3>
-                    <p>{box.description}</p>
-                    <div className="price-add">
-                      <span className="price">{box.price}</span>
-                      <span className="info-icon">ℹ️</span>
-                      <button className="add-button">+</button>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/juniorbox.png")} alt="Junior Box" />
+      <div className="details">
+        <h3>Junior Box</h3> {/* Heading is now here */}
+        <p>2 California Roll,1 Tomago Nigiri,1 Shake Nigri,3 Veggi</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">7.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
             </div>
           </div>
           {/* Add other card sections here below Poke Bowls */}

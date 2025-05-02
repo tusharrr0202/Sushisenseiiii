@@ -10,7 +10,7 @@ class Header extends React.Component {
                     backgroundImage: `url(${banner})`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
-                    height: "500px",
+                    height: "400px",
                 }}
             >
                 <div

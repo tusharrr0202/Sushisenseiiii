@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // You can use fetch if you want
-import '../styles/Signupmodal.css';
+ // You can use fetch if you want
+import '../styles/Signup.css';
 
 
 
@@ -9,56 +9,71 @@ const SignupModal = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [registrationFailed, setRegistrationFailed] = useState(false);
-  const [registrationError, setRegistrationError] = useState('');
+  const [error, setError] = useState('');
 
-  const handleSignUp = async (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
 
-    console.log('Attempting sign up with:', { name, email, password, confirmPassword });
-
     if (password !== confirmPassword) {
-      setRegistrationFailed(true);
-      setRegistrationError('Passwords do not match');
+      setError('Passwords do not match');
       return;
     }
 
-    try {
-      const signupEndpoint = 'https://cors-anywhere.herokuapp.com/https://testapp.gokidogo.com/webapi/api.php/customersignup';
-
-
-      const response = await axios.post(signupEndpoint, {
-        name,
-        email,
-        password
-      });
-      
-      const data = await response.json();
-
-      if (data.status === 'success') {
-        alert('Signup successful!');
-      } else {
-        setRegistrationFailed(true);
-        setRegistrationError(data.message || 'Registration failed');
-      }
-    } catch (error) {
-      setRegistrationFailed(true);
-      setRegistrationError('Something went wrong');
-      console.error('Signup error:', error);
-    }
+    console.log('Attempting sign up with:', { name, email, password, confirmPassword });
+    // API call will be added later
   };
 
   return (
-    <form onSubmit={handleSignUp}>
-      <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <input type="password" placeholder="Confirm Password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-      <button type="submit">Sign Up</button>
-
-      {registrationFailed && <p style={{ color: 'red' }}>{registrationError}</p>}
-    </form>
+    <div className="overlay">
+      <div className="modal">
+        <h2 className="modal-title">Sign Up</h2>
+        {error && <p className="error-message">{error}</p>}
+        <form className="signup-form" onSubmit={handleSignUp}>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Your Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm Your Password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="signup-btn">Sign Up</button>
+        </form>
+        <p className="login-text">
+          Already have an account? <a href="/login">Log In</a>
+        </p>
+      </div>
+    </div>
   );
 };
+
 
 export default SignupModal;
