@@ -151,10 +151,10 @@
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border: 1px solid #e0eee0;
-  margin: 5px;
+  margin: 3px;
   background-color: #D2E6C9;
-  width: 465px;
-  height: 200px;
+  width: 455px;
+  height: 195px;
 }
 
 .food-card .image-container {
@@ -186,7 +186,7 @@
 }
 
 .food-card .details h3 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: bold;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -194,7 +194,7 @@
 
 .food-card .details p {
   color: #666;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 8px;
 }
 
@@ -208,7 +208,7 @@
 .food-card .details .price-add .price {
   font-weight: bold;
   color: #333;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-right: 15px;
 }
 
@@ -234,22 +234,22 @@
 
 /* Order Overview Section */
 .order-overview {
-  width: 150%; /* Make it full width */
-  padding: 20px; /* Adjust padding as needed */
+  width: 10%; /* Make it full width */
+  padding: 15px; /* Adjust padding as needed */
   background-color: #D2E6C9; /* Keep your preferred background */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   color: black; /* Adjust text color if needed */
-  margin-right: 10; /* Remove right margin */
+  margin-right: 8px; /* Remove right margin */
 }
 
 .order-overview h2 {
   display: block;
   margin-top: 0;
   margin-bottom: 15px;
-  padding: 15px;
+  padding: 13px;
   font-size: 2.0em;
   text-align: center;
   color: #fff;
@@ -257,7 +257,7 @@
 }
 
 .order-details {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .order-item {
@@ -266,7 +266,7 @@
   align-items: center;
   margin-bottom: 0; /* Remove bottom margin */
   padding-bottom: 5px; /* Adjust padding */
-  font-size: 0.95em;
+  font-size: 0.90em;
   color: black; /* Adjust text color */
   border-bottom: none; /* Remove line separators */
 }
@@ -375,9 +375,10 @@
   }
 
   .order-overview {
-    width: 100%;
+    width: 80%;
     margin-left: 0;
     margin-top: 25px;
+    max-height: 200px;
     padding-bottom: 20px;
   }
 
@@ -407,7 +408,8 @@
   }
 
   .food-card {
-    width: 100%; /* Make food cards full width on smaller screens */
+    width: 80%; /* Make food cards full width on smaller screens */
+    max-width: 300px;
     margin: 10px 0; /* Adjust margin for vertical stacking */
   }
 }
@@ -428,7 +430,7 @@
   }
 
   .order-overview {
-    width: 40%;
+    width: 30%;
     min-height: 200px;
     margin-top: 25px;
     margin-right: 25px;
