@@ -83,7 +83,7 @@ const Navbar = () => {
                 position: 'absolute',
                 top: '9px',
                 right: '15px',
-                background: 'none',
+                background: 'black',
                 border: 'none',
                 fontSize: '20px',
                 cursor: 'pointer'
@@ -125,6 +125,21 @@ const Navbar = () => {
               cursor: 'pointer'
             }}>
               Submit
+            </button>
+
+            <button
+              onClick={() => alert("Redirecting to password recovery...")}
+              style={{
+                marginTop: '10px',
+                background: 'none',
+                border: 'none',
+                color: '#007bff',
+                cursor: 'pointer',
+                textDecoration: 'underline',
+                fontSize: '14px'
+              }}
+            >
+              Forgot Password?
             </button>
           </div>
         </div>
