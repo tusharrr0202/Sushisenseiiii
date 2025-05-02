@@ -43,7 +43,7 @@
   align-items: center;
   background-color: #f8f8f8;
   position: sticky;
-  top: 70px; /* Adjusted to be below fixed header */
+  top: 0px; /* Adjusted to be below fixed header */
   left: 0;
   z-index: 15;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
