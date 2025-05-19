@@ -72,19 +72,44 @@ const Home = () => {
       {/* Sticky Button List */}
       <div className="button-scroll-container">
         <ul className="button-list">
-          <li className="button">New Creations</li>
-          <li className="button">Deal of the Month</li>
-          <li className="button">Poke Bowls</li>
-          <li className="button">Sportilicious</li>
-          <li className="button">Boxes</li>
-          <li className="button">Appetizers</li>
-          <li className="button">Maki</li>
-          <li className="button">Rolls</li>
-          <li className="button">Nigiri</li>
-          <li className="button">Specials</li>
-          <li className="button">Extras</li>
-          <li className="button">Drinks</li>
-          <li className="button">Ice</li>
+          <li className="button">
+          <a href="#newCreationsSection">New Creations</a>
+          </li>
+          <li className="button">
+          <a href="#dealOfMonthSection">Deal of the Month</a>
+          </li>
+          <li className="button"> 
+          <a href="#pokeBowlsSection">Poke Bowls</a>
+          </li>
+          <li className="button">
+          <a href="#Sportilicious">Sportilicious</a>
+          </li>
+          <li className="button">
+          <a href="#boxessection">Boxes</a>
+          </li>
+          <li className="button">
+          <a href="#appetizersSection">Appetizers</a>
+          </li>
+          <li className="button">
+            <a href="#makiSection">Maki</a>
+            </li>
+          <li className="button">
+          <a href="#rollsSection">Rolls</a>
+          </li>
+          <li className="button">
+          <a href="#nigiriSection">Nigiri</a></li>
+          <li className="button">
+          <a href="#specialsSection">Specials</a>
+          </li>
+          <li className="button">
+          <a href="#extrasSection">Extras</a>
+          </li>
+          <li className="button">
+          <a href="#drinksSection">Drinks</a>
+          </li>
+          <li className="button">
+          <a href="#iceSection">Ice</a>
+          </li>
         </ul>
       </div>
 
@@ -157,6 +182,7 @@ const Home = () => {
     </div>
   </div>
 </div>
+
 
  {/* Poke Bowls Section */}
 <div id="pokeBowlsSection" className="content-section">
@@ -365,13 +391,460 @@ const Home = () => {
         </div>
       </div>
     </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/veggiebox.png")} alt="Veggie Box" />
+      <div className="details">
+        <h3>Veggie Box</h3> {/* Heading is now here */}
+        <p>12 Maki, 2 Tomago Nigiri,2 Inari</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">8.20 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/veggiepartybox.png")} alt="Veggie Party Box" />
+      <div className="details">
+        <h3>Veggie Party Box</h3> {/* Heading is now here */}
+        <p>4 Avocado Nigiri,4 inari,4 tomago,1 kappa maki,1 pepper  </p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">24.90 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/bigveggi.png")} alt="Big Veggi Box" />
+      <div className="details">
+        <h3>Big Veggi Box</h3> {/* Heading is now here */}
+        <p>4 Big Vegetable Rolls,12 Vegetable Makki</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">8.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/insideoubox.png")} alt="Inside-out Box" />
+      <div className="details">
+        <h3>Inside-out Box</h3> {/* Heading is now here */}
+        <p>2 Inside Out Roll with sesame,2 Inside Out Roll with Masago</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">9.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/tastybox.png")} alt="Tasty Box" />
+      <div className="details">
+        <h3>Tasty Box</h3> {/* Heading is now here */}
+        <p>2 Shake California ,2 Shake California,2 Shake Inside Out</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">9.90 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/bigtastybox.png")} alt="Big Tasty Box" />
+      <div className="details">
+        <h3>Big Tasty Box</h3> {/* Heading is now here */}
+        <p>2 Shake California ,2 Shake California,2 Shake Inside Out,2 Chuk</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">12.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/sashimibox.png")} alt="Sashimi Box" />
+      <div className="details">
+        <h3>Sashimi Box</h3> {/* Heading is now here */}
+        <p>6 salmon pieces,6 tuna pieces, Portion of Sushi rice</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span clasName="price">14.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/shake_sashimibox.png")} alt="Shake Sashimi Box" />
+      <div className="details">
+        <h3>Shake Sashimi Box</h3> {/* Heading is now here */}
+        <p>12 salmon pieces,Portion of Sushi rice</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">13.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/tunasashimibox.png")} alt="Tuna Sashimi Box" />
+      <div className="details">
+        <h3>Tuna Sashimi Box</h3> {/* Heading is now here */}
+        <p>12 salmon pieces,Portion of Sushi rice</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">15.00 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
             </div>
           </div>
-          {/* Add other card sections here below Poke Bowls */}
+          {/* Appetizers Section */}
+<div id="appetizersSection" className="content-section">
+  <h2>Appetizers</h2>
+  <div className="card-grid">
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/image.png")} alt="Image" />
+      <div className="details">
+        <h3>Tom Kha Pag Soup</h3> {/* Heading is now here */}
+        <p>Coconut milk, vegetables, seaweed, lemongrass, galangal</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">5.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
         </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/image.png")} alt="Tom Kha Gai Soup" />
+      <div className="details">
+        <h3>Tom Kha Gai Soup</h3> {/* Heading is now here */}
+        <p>Chicken breast prepared in coconut milk, vegetables. seaweed</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">6.00 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/image.png")} alt="Tom Kha Pla Soup" />
+      <div className="details">
+        <h3>Tom Kha Pla Soup</h3> {/* Heading is now here */}
+        <p>Salmon prepared in coconut milk, vegetables, seaweed, lemon</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">5.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/image.png")} alt="Tom Kha Gung Soup" />
+      <div className="details">
+        <h3>Tom Kha Gung Soup</h3> {/* Heading is now here */}
+        <p>Shrimp in coconut milk, vegetables, seaweed, lemongrass</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">6.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/redsalad.png")} alt="Red Salad" />
+      <div className="details">
+        <h3>Red Salad</h3> {/* Heading is now here */}
+        <p>Ginger salad</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">4.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/seaweedsalad.png")} alt="Seaweed Salad" />
+      <div className="details">
+        <h3>Seaweed Salad</h3> {/* Heading is now here */}
+        <p>seaweed salad</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">5.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/squidsalad.png")} alt="Squid Salad" />
+      <div className="details">
+        <h3>Squid Salad</h3> {/* Heading is now here */}
+        <p>squid salad</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">5.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/mixedsalad.png")} alt="Miso soup meets quinoa" />
+      <div className="details">
+        <h3>Mixed Salad</h3> {/* Heading is now here */}
+        <p>Red Ginger Salad, Seaweed Salad, Squid Salad</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">5.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/yakitori.png")} alt="Yakitori" />
+      <div className="details">
+        <h3>Yakitori</h3> {/* Heading is now here */}
+        <p>3 chicken skewers marinated in teriyaki sauce, sesame</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">5.80 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/misosuppe.png")} alt="Miso soup" />
+      <div className="details">
+        <h3>Miso soup</h3> {/* Heading is now here */}
+        <p>We serve traditional miso soup with wakame seaweed, tofu</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/nudelsuppe.png")} alt="Noodle soup" />
+      <div className="details">
+        <h3>Noodle soup</h3> {/* Heading is now here */}
+        <p>Delicious soup served with wakame seaweed, tofu and fresh sc</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.90 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/miso-suppe-meets-quinoa.png")} alt="Miso soup meets quinoa" />
+      <div className="details">
+        <h3>Miso soup meets quinoa</h3> {/* Heading is now here */}
+        <p>Miso Soup Reloaded...with quinoa for more power</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/quinoa.png")} alt="Quinoa" />
+      <div className="details">
+        <h3>Miso soup meets quinoa</h3> {/* Heading is now here */}
+        <p>...Served with sesame oil and fresh chives</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">4.50 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/edamame.png")} alt="Edamame" />
+      <div className="details">
+        <h3>Miso soup meets quinoa</h3> {/* Heading is now here */}
+        <p>Ingenious Veg plant-based protein bomb</p>
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.90 €</span>
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="makiSection" className="content-section">
+  <h2>Maki</h2>
+  <div className="card-grid">
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/chicken maki.png")} alt="Chicken Maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Chicken Maki</h3> {/* Example Maki name */}
+        <p>seasoned chicken fillet</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    {/* Add more Maki items here following the same structure */}
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/tekka maki.png")} alt="Tekka Maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Tekka Maki</h3> {/* Example Maki name */}
+        <p>tuna</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/Tuna maki.png")} alt="Tuna maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Tuna Maki</h3> {/* Example Maki name */}
+        <p>cooked tuna</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">4.50 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/shake maki.png")} alt="shake maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Shake Maki</h3> {/* Example Maki name */}
+        <p>salmon</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/shakegunkan maki.png")} alt="Shake Gunkan maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Shake Gunkan Maki</h3> {/* Example Maki name */}
+        <p>cooked salmon</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.30 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/surimi maki.png")} alt="Surimi maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Surimi Maki</h3> {/* Example Maki name */}
+        <p>crab meat</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/avocado maki.png")} alt="avocado maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Avocado Maki</h3> {/* Example Maki name */}
+        <p>avocado</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">3.50 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/kappa maki.png")} alt="kappa maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Kappa Maki</h3> {/* Example Maki name */}
+        <p>cucumbers</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">2.60 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/oshinko maki.png")} alt="oshinko maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Oshinko Maki</h3> {/* Example Maki name */}
+        <p>radish</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">2.60 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="food-card"> {/* Changed class to food-card */}
+      <img src={require("../assets/pepper maki.png")} alt="oshinko maki" /> {/* Replace with actual Maki image */}
+      <div className="details">
+        <h3>Pepper Maki</h3> {/* Example Maki name */}
+        <p>paprika</p> {/* Example Maki description */}
+        <div className="price-add"> {/* You can keep this for the button */}
+          <span className="price">2.60 €</span> {/* Example Maki price */}
+          <span className="info-icon">ℹ️</span>
+          <button className="add-button">+</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    {/* Continue adding more Maki items as needed */}
+  </div>
+</div>
+        </div>
+        
 
         {/* Right Side - Order Overview Section */}
         <div className="order-overview">
+
+          
           <h2>Order overview</h2>
           <div className="order-details">
             <div className="order-item">

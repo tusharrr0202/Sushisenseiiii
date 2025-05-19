@@ -3,7 +3,7 @@
   max-width: 1200px;
   margin: auto;
   padding: 20px;
-  position: relative;
+  position: relative; /* Important for relative positioning of other elements */
 }
 
 /* Header */
@@ -38,12 +38,12 @@
   overflow-x: auto;
   white-space: nowrap;
   padding: 10px 0;
-  margin-bottom: -70px;
+  /* margin-bottom: -70px;  Remove negative margin, it's not needed and can cause issues */
   display: flex;
   align-items: center;
   background-color: #f8f8f8;
-  position: sticky;
-  top: 0px; /* Adjusted to be below fixed header */
+  position: sticky; /* Make the button bar sticky */
+  top: 0px; /* Stick below the header */
   left: 0;
   z-index: 15;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -78,19 +78,39 @@
   background-color: #c5e1a5;
 }
 
+.button a {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit; /* Inherit text color from the button */
+}
+
+.button a:hover {
+  /* If you want a hover effect on the link within the button */
+  /* You might want to adjust this to match the button's hover */
+  color: #2d662f; /* Keep the text color on hover */
+}
+
 /* Main Content Area */
 .main-content {
   display: flex;
-  flex-direction: row; /* For side-by-side layout on wider screens */
+  flex-direction: row;
   align-items: flex-start;
-  padding-top: calc(70px + 60px); /* Adjusted for sticky button bar */
-  gap: 14px; /* Spacing between card area and order overview on wider screens */
-  justify-content: space-between; /* Add this line */
+  /* padding-top: calc(70px + 60px);  Remove this padding-top, handle it differently */
+  padding-top: 130px; /* Correct padding: header(70px) + button bar (60px) */
+  gap: 14px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 500px; /* Ensure main content has some minimum height for scrolling */
+  position: relative; /* Important, so order-overview can stick relative to this */
 }
 
 /* Left side container for all card content */
 .card-area {
-  width: 70%; /* Adjusted width to accommodate full-width order overview */
+  width: 70%;
   margin-bottom: 25px;
 }
 
@@ -104,7 +124,6 @@
 
 /* Specific styling for New Creations section */
 #newCreationsSection {
-  margin-left: 20px; /* Reset left margin */
   margin-top: 0;
 }
 
@@ -117,30 +136,30 @@
 
 #newCreationsSection .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns on wider screens */
-  gap: 8px; /* Adjust gap as needed between cards */
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 8px;
   margin-bottom: 25px;
 }
 
-/* Styling for other card grid sections (keeping your existing styles) */
+/* Styling for other card grid sections */
 #dealOfMonthSection .card-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 #pokeBowlsSection .card-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 #sportiliciousSection .card-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 #boxesSection .card-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 #appetizersSection .card-grid {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
 
 /* 🍔 New Food Card Styling */
@@ -153,8 +172,9 @@
   border: 1px solid #e0eee0;
   margin: 3px;
   background-color: #D2E6C9;
-  width: 455px;
-  height: 195px;
+  width: 100%;
+  max-width: 450px;
+  height: 190px;
 }
 
 .food-card .image-container {
@@ -172,12 +192,10 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Remove the overlay as it's not present in the desired output */
 .food-card .image-container .overlay {
   display: none;
 }
 
-/* Adjust .details */
 .food-card .details {
   padding: 10px;
   display: flex;
@@ -234,15 +252,15 @@
 
 /* Order Overview Section */
 .order-overview {
-  width: 10%; /* Make it full width */
-  padding: 15px; /* Adjust padding as needed */
-  background-color: #D2E6C9; /* Keep your preferred background */
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  color: black; /* Adjust text color if needed */
-  margin-right: 8px; /* Remove right margin */
+  width: 30%;
+  padding: 15px;
+  background-color: #D2E6C9;
+  border-radius: 8px;
+  color: black;
+  position: sticky; /* Make it sticky */
+  top: 150px; /* Stick below the header (70px) + button bar (60px) + some extra (20px) */
+  /* top: calc(70px + 60px + 20px);  More explicit calculation */
+  align-self: flex-start; /* Important:  Stick to the top of its container */
 }
 
 .order-overview h2 {
@@ -254,6 +272,7 @@
   text-align: center;
   color: #fff;
   background-color: #367236;
+  border-radius: 5px;
 }
 
 .order-details {
@@ -264,11 +283,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0; /* Remove bottom margin */
-  padding-bottom: 5px; /* Adjust padding */
+  margin-bottom: 8px;
+  padding-bottom: 8px;
   font-size: 0.90em;
-  color: black; /* Adjust text color */
-  border-bottom: none; /* Remove line separators */
+  color: black;
+  border-bottom: 1px solid #e0eee0;
 }
 
 .order-item span:first-child {
@@ -298,30 +317,35 @@
 }
 
 .pre-order-button {
-  width: 100%; /* w-full */
-  font-size: 1.25rem; /* text-xl */
-  background-image: linear-gradient(to right, #BCE158, #387339); /* bg-gradient-to-r */
-  color: #FFF; /* text-white */
-  font-weight: 600; /* font-semibold */
-  padding: 0.5rem 1rem; /* py-2 px-4 */
-  border-top-left-radius: 0.75rem; /* rounded-tl-xl */
-  border-bottom-right-radius: 0.75rem; /* rounded-br-xl */
+  width: 100%;
+  font-size: 1.25rem;
+  background-image: linear-gradient(to right, #BCE158, #387339);
+  color: #FFF;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
   border: none;
   cursor: pointer;
-  transition: background-image 0.4s ease-in-out; /* transition */
+  transition: background-image 0.4s ease-in-out;
   text-align: center;
   text-decoration: none;
+  border-radius: 8px;
 }
 
 .pre-order-button:hover {
-  background-image: linear-gradient(to right, #387339, #BCE158); /* hover:bg-gradient-to-r */
+  background-image: linear-gradient(to right, #387339, #BCE158);
 }
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column;
-    padding-top: calc(70px + 60px);
-    align-items: stretch; /* Make order overview full width */
+    /* padding-top: calc(70px + 50px);  Removed this, included in the 130px below*/
+    padding-top: 130px;
+    align-items: stretch;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .card-area {
@@ -334,22 +358,17 @@
     grid-template-columns: 1fr;
   }
 
-  #newCreationsSection {
-    margin-left: 0; /* Reset left margin on smaller screens */
-  }
   #newCreationsSection h2 {
-    margin-top: 5px; /* Adjust this value */
-    margin-bottom: 15px; /* Adjust this value */
-    font-size: 1.5em;
-    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
   }
 
   #newCreationsSection .card-grid {
     display: flex;
     flex-direction: column;
-    align-items: stretch; /* Make food cards full width */
-    gap: 0px; /* Adjust vertical gap on smaller screens */
-    
+    align-items: stretch;
+    gap: 10px;
   }
 
   #dealOfMonthSection .card-grid {
@@ -375,15 +394,20 @@
   }
 
   .order-overview {
-    width: 80%;
-    margin-left: 0;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 25px;
-    max-height: 200px;
+    position: sticky; /* Keep sticky on small screens */
+    top: 130px; /* Correct value for mobile */
     padding-bottom: 20px;
+    border-radius: 8px;
+    align-self: flex-start;
   }
 
   .button-scroll-container {
-    top: 70px;
+    top: 70px; /* Button bar position */
+    margin-bottom: -50px;
   }
 
   .button-list {
@@ -396,21 +420,10 @@
     min-width: 100px;
   }
 
-  .creation-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .creation-card .image-container img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
   .food-card {
-    width: 80%; /* Make food cards full width on smaller screens */
-    max-width: 300px;
-    margin: 10px 0; /* Adjust margin for vertical stacking */
+    width: 100%;
+    max-width: none;
+    margin: 10px 0;
   }
 }
 
@@ -420,12 +433,14 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 20px;
-    padding-top: calc(70px + 60px); /* Adjusted for sticky button bar */
+    padding-top: 130px; /* Correct value */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .card-area {
-    margin-left: 10px;
-    width: 60%;
+    margin-left: 0;
+    width: 65%;
     margin-bottom: 25px;
   }
 
@@ -433,6 +448,5 @@
     width: 30%;
     min-height: 200px;
     margin-top: 25px;
-    margin-right: 25px;
   }
 }
