@@ -99,8 +99,8 @@
   flex-direction: row;
   align-items: flex-start;
   /* padding-top: calc(70px + 60px);  Remove this padding-top, handle it differently */
-  padding-top: 130px; /* Correct padding: header(70px) + button bar (60px) */
-  gap: 14px;
+  padding-top: 100px; /* Correct padding: header(70px) + button bar (60px) */
+  gap: 10px;
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
@@ -118,7 +118,7 @@
 .card-area .card-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 6px;
   margin-bottom: 25px;
 }
 
@@ -258,7 +258,7 @@
   border-radius: 8px;
   color: black;
   position: sticky; /* Make it sticky */
-  top: 150px; /* Stick below the header (70px) + button bar (60px) + some extra (20px) */
+  top: 70px; /* Stick below the header (70px) + button bar (60px) + some extra (20px) */
   /* top: calc(70px + 60px + 20px);  More explicit calculation */
   align-self: flex-start; /* Important:  Stick to the top of its container */
 }
@@ -342,7 +342,7 @@
   .main-content {
     flex-direction: column;
     /* padding-top: calc(70px + 50px);  Removed this, included in the 130px below*/
-    padding-top: 130px;
+    padding-top: 100px;
     align-items: stretch;
     padding-left: 10px;
     padding-right: 10px;
